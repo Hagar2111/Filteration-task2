@@ -1,0 +1,59 @@
+@import '../../styles.scss';
+
+section{
+    padding: 3rem;
+
+    h2{
+        font-family: $fontFamily-1;
+        font-weight: 800;
+        color: $firstColor;
+        font-size: 8rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .card{
+        border-radius: 30px;
+        border-color: #FFD8AB;
+        img{
+            border-radius: 30px;
+        }
+        h5{
+            color: $firstColor;
+            font-size: 1rem;
+            font-weight: 900;
+        }
+        p{
+            font-size: 14px;
+            line-height: 20px;
+            color: #333333;
+            font-family: $fontFamily-2;
+        }
+    }
+
+    a{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+//media queries
+
+//medium screens
+@media only screen and (max-width: 992px) {
+    section{
+        h2{
+            font-size: 6rem;
+        }
+    }
+}
+
+//small devices
+@media only screen and (max-width: 768px) {
+    section{
+        h2{
+            font-size: 4rem;
+        }
+    }
+}

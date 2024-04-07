@@ -1,0 +1,219 @@
+@import '../../styles.scss';
+
+section{
+    margin: 0;
+    position: relative;
+
+    .colored-bg{
+            background: rgb(201,138,64);
+            background: linear-gradient(50deg, rgba(201,138,64,1) 67%, rgba(243,174,95,1) 100%);
+
+
+            >span{
+                color: $secondColor;
+                font-size: 1.6rem;
+                font-weight: 700;
+                font-family: $fontFamily-1;
+                text-transform: uppercase;
+                position: absolute;
+                transform: translateX(20vw);
+            }
+            .text-box{
+                position: absolute;
+                transform: translate(15vw,33vh);
+
+                h2{
+                    font-size: 4.5rem;
+                    font-weight: 800;
+                    font-family: $fontFamily-1;
+                    color: $secondColor;
+                    line-height: 1.5;
+                    text-transform: uppercase;
+                }
+                >p{
+                    color: $secondColor;
+                    font-family: $fontFamily-2;
+                    font-weight: 600;
+                    width: 45%;
+                }
+            }
+
+            .icon-box{
+                position: absolute;
+                bottom: 0;
+                height: 23vh;
+                width: 23vw;
+                flex-direction: column;
+                background-color: $secondColor;
+                background-image: url('../../assets/imgs/tasty-small-trans.png');
+                background-size: cover;
+
+                ul{
+                    li{
+                        margin: 0.5rem;
+                        a{
+                            color: $firstColor;
+                            i{
+                                font-size: 1.5rem;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .tele{
+                color: $secondColor;
+                font-family: $fontFamily-2;
+                font-weight: 500;
+                position: absolute;
+                bottom: 1%;
+                left: 25%;
+                span{
+                font-weight: 700;
+                }
+            }
+     }
+    .trans-bg{
+        background-image: url('../../assets/imgs/tasty-pastries-trans.png');
+
+        img{
+            position: absolute;
+            transform: translate(-15vw,33vh);
+            object-fit: cover;
+            height: 22rem;
+        }
+    }
+}
+//media queries
+
+//larg screens
+@media only screen and (max-width: 1200px){
+    .colored-bg{
+        .text-box{
+            position: absolute;
+            transform: translate(10vw,33vh); 
+
+            h2{
+                font-size: 4rem;
+            }
+        }
+    }
+}
+//medium screens
+@media only screen and (max-width: 992px){
+
+    section{
+        .colored-bg{
+            height:70vh;
+            
+            >span{
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+            .text-box{
+            transform: translate(10vw,20vh); 
+
+                h2{
+                    font-size: 3.5rem;
+                    font-weight: 800;
+                }
+                >p{
+                    font-weight: 500;
+                    width: 50%;
+                }
+            }
+            .icon-box{
+                position: absolute;
+                bottom: 4.5rem;
+                height: auto;
+                width: auto;
+                flex-direction: row;
+                background-image: none;
+                background-color: transparent;
+                padding-left: 0.5rem;
+            }
+            
+            .tele{
+                color: $firstColor;
+                font-weight: 600;
+                position: absolute;
+                bottom: 0.5%;
+                left: 50%;
+                transform: translateX(-50%);
+                span{
+                font-weight: 700;
+                }
+            }
+        }
+        .trans-bg{
+            background-image: url('../../assets/imgs/tasty-pastries-trans.png');
+            height: 40vh;
+
+            img{
+                position: absolute;
+                transform: translate(15vw,-10vh);
+                object-fit: cover;
+                height: 22rem;
+            }
+        }
+
+    }
+    
+}
+//small devices
+@media only screen and (max-width: 768px){
+    section{
+        .colored-bg{
+            height:70vh;
+
+            .text-box{
+                position: absolute;
+                transform: translate(15vw,20vh);
+            }
+        }
+    }
+}
+
+
+//Extra Small devices
+
+@media only screen and (max-width: 600px) {
+    section{
+        .colored-bg{
+            height:70vh;
+
+            .text-box{
+                position: absolute;
+                transform: translate(15vw,20vh);
+                h2{
+                    font-size: 2.5rem;
+                }
+            }
+            .icon-box{
+                position: absolute;
+                bottom: 3rem;
+                left: 50%;
+                transform: translateX(-50%);
+                ul{
+                    display: flex;
+                }
+            }
+
+        }
+        .trans-bg{
+            height: 50vh;
+
+            img{
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%,-8vh);
+                object-fit: cover;
+                height: 22rem;
+            }
+        }
+
+    }
+    
+}
+

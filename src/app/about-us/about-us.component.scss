@@ -1,0 +1,68 @@
+@import '../../styles.scss';
+
+section{
+    background: rgb(201,138,64);
+    background: linear-gradient(90deg, rgba(201,138,64,1) 60%, rgba(255,255,255,1) 60%);
+    padding: 3rem;
+
+    .row{
+        
+        h2{
+            font-family: $fontFamily-1;
+            font-weight: 800;
+            color: $secondColor;
+            font-size: 8rem;
+            text-align: left;
+            text-transform: uppercase;
+        }
+        p{
+            color: $secondColor;
+            font-family: $fontFamily-2;
+            font-size: 1rem;
+            font-weight: 600;
+            width: 70%;
+        }
+        div{
+            img{
+                max-width: 80%;
+                object-fit: cover;
+                padding: 0.3rem;
+                border-radius: 10px;
+            }
+        }
+        a{
+            width: 10rem;
+        }
+    }
+}
+
+//Media queries
+
+
+//medium screens
+@media only screen and (max-width: 992px) {
+    section{
+        background: rgb(201,138,64);
+        background: linear-gradient(180deg, rgba(201,138,64,1) 60%, rgba(255,255,255,1) 60%);
+
+        .row{
+            gap: 2rem;
+            h2{
+                font-size: 5rem;
+                text-align:justify;
+            }
+            p{
+                text-align:justify;
+            }
+            h2,p,a{
+                margin: auto;
+            }
+            div{
+                img{
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+}

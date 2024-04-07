@@ -1,0 +1,56 @@
+<section id="contact">
+    <div class="container">
+        <h2>Contact us</h2>
+        <div class="row justify-content-center mt-3">
+
+            <div class="col-lg-5 col-md-6 ">
+                <div *ngIf="error.length > 0 " class=" row justify-content-center align-content-center py-5 my-auto alert">
+                    <div class="col-lg-6  ">
+                        <p>{{error}}</p>
+                    </div>
+                </div>
+                <form [formGroup]="applyForm" (ngSubmit)="submitForm(applyForm)" class=" d-flex flex-column justify-content-center align-content-center">
+
+                    <div class="form-group my-2  ">
+                        <input id="full-name" type="text" formControlName="name" placeholder="Full Name" class="form-control">
+                        <div class="alert my-2" *ngIf="applyForm.get('name')?.errors != null && applyForm.get('name')?.touched">
+                            <p *ngIf="applyForm.get('name')?.errors?.['required']"> name is Required</p>
+                            <p *ngIf="applyForm.get('name')?.errors?.['minLength']"> name is Min Lengh 3 car</p>
+                            <p *ngIf="applyForm.get('name')?.errors?.['maxLength']"> name is Max Lengh 10 car</p>
+                            <p *ngIf="applyForm.get('name')?.errors?.['pattern']"> Please, Enter a valid name and start with uppercase</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group my-2 ">
+                        <input id="email" type="email" formControlName="email" placeholder="Email" class="form-control">
+                        <div class="alert my-2" *ngIf="applyForm.get('email')?.errors != null && applyForm.get('email')?.touched">
+                            <p *ngIf="applyForm.get('email')?.errors?.['required']" >email is Required</p>
+                            <p *ngIf="applyForm.get('email')?.errors?.['email'] && applyForm.get('email')?.errors?.['pattern']" >Please enter a Valid Email!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group my-2 ">
+                        <input id="phone" type="tel" formControlName="phone" placeholder="Phone Number" class="form-control">
+                        <div class="alert my-2" *ngIf="applyForm.get('phone')?.errors != null && applyForm.get('phone')?.touched">
+                            <p *ngIf="applyForm.get('phone')?.errors?.['required']" >phone is Required</p>
+                            <p *ngIf="applyForm.get('phone')?.errors?.['pattern']" >phone length must be greater than or equal to 8 and phone must contain one or more uppercase , lowercase , numeric and special characters</p>
+                        </div>
+                    </div>
+                    <button class=" btn btnStyle mt-1" type="submit" [disabled]="applyForm.invalid" >send</button>
+                </form>
+            </div> 
+
+            <div class="col-lg-5 col-md-6  my-auto">
+                <address class="d-flex flex-column justify-content-between align-content-sm-center align-items-start align-items-md-start align-items-sm-center  ">
+                    <a href="mailto:upskilling.eg1@gmail.com" class="pb-4">
+                        <i class="fa-solid fa-envelope"></i>   upskilling.eg1&#64;gmail.com
+                    </a>
+                    <a href="tel:+201154932137">
+                        <i class="fa-solid fa-phone"></i>  +20 115 493 2137
+                    </a>
+                </address>
+            </div>
+
+        </div>
+    </div>
+</section>

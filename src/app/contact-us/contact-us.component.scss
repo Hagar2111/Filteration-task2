@@ -1,0 +1,107 @@
+@import '../../styles.scss';
+
+
+section{
+    padding: 3rem;
+    border-bottom: 7.5rem solid #584125;
+    h2{
+        font-family: $fontFamily-1;
+        font-weight: 800;
+        color: $firstColor;
+        font-size: 9rem;
+        text-align: center;
+        text-transform: uppercase;
+    }  
+    
+    .row{
+        form{
+            .form-group{
+                width: 70%;
+                align-self: center;
+                .alert{
+                    background-color: $firstColor;
+                    color: $secondColor;
+                    align-self: center;
+
+                }
+                
+                .form-control{
+                    padding: 1rem;
+                    border-width: 0;
+                    background-color: #FFD39F;
+                    color: $secondColor;
+                    border-radius: 61px;
+                    margin: 0 auto;
+
+                    &::placeholder{
+                        font-size: 14px;
+                        font-weight: 800;
+                    }
+                }
+                .form-control:focus{
+                    border:none;
+                    color: #584125;
+                    outline: none;
+                    box-shadow: none;
+                }
+                    
+            }
+            button{
+                width: 30%;
+                margin: auto;
+                border-color: $firstColor;
+                border-width: 3px;
+                color:#000 ;
+                font-size: 14px;
+                font-weight: 800;
+            }
+            
+        }
+    }
+        
+    address{
+        a{
+            color: #333333;
+            text-decoration: none;
+            i{
+                color: $firstColor;
+                margin-right: 0.7rem;
+            }
+        }
+    }
+}
+
+//media queries
+
+//medium screens
+@media only screen and (max-width: 992px) {
+    section{
+        h2{
+            font-size: 5rem;
+        }
+    }
+}
+
+
+//small devices
+@media only screen and (max-width: 768px) {
+    section{
+        h2{
+            font-size: 4rem;
+        }
+        address{
+            margin-top: 2rem;
+        }
+    }
+}
+
+//Extra Small devices
+
+@media only screen and (max-width: 600px) {
+    section{
+        
+        address{
+            align-items: center;
+        }
+    }
+}

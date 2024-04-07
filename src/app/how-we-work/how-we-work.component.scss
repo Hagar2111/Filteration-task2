@@ -1,0 +1,149 @@
+@import '../../styles.scss';
+
+section{
+    .row{
+        margin: 0;
+    }
+    .overlay{
+        .row{
+            margin: 0;
+        }
+        h2{
+            font-family: $fontFamily-1;
+            font-weight: 800;
+            color: $secondColor;
+            font-size: 8rem;
+            text-align: right;
+            text-transform: uppercase;
+        }
+        p{
+            color: $firstColor;
+            font-family: $fontFamily-2;
+            font-size: 1.1rem;
+            font-weight: 600;
+            height: auto;
+            margin-top: auto;
+            margin-left: auto;
+            width: 50%;
+        }
+        
+        div{
+            display: flex;
+            justify-content: center;
+            img{
+                max-width: 100%;
+                object-fit: cover;
+                padding: .3rem;
+            }
+        }
+        
+    
+        a{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .trans-bg{
+        background-image: url('../../assets/imgs/How-we-work-trans.png');
+    }
+    .colored-bg{
+        height: 105vh;
+    }
+}
+
+
+//media queries
+
+
+//larg screens
+@media only screen and (max-width: 1300px){
+    .overlay{
+    
+        h2{
+            margin-top: 2rem;
+            font-size: 7rem;
+        }
+    }
+}
+
+//medium screens
+@media only screen and (max-width: 992px) {
+
+    .row:first-of-type{
+        flex-direction: column-reverse;
+        .overlay{
+            padding-top: 3rem;
+            .row:first-of-type{
+                flex-direction: column-reverse;
+            }
+    
+            h2{
+                color: $secondColor;
+                font-size: 5rem;
+                text-align:justify;
+            }
+            p{
+                color: $secondColor;
+                text-align:justify;
+                width: 70%;
+                margin: auto;
+            }
+            h2,p{
+                margin: auto;
+            }
+        }
+
+        .colored-bg{
+            height: 70vh;
+        }
+        .trans-bg{
+            height: 70vh;
+        }
+    }
+    
+}
+
+//small devices
+@media only screen and (max-width: 768px) {
+
+    div{
+        img{
+            padding: 0.5rem;
+        }
+    }
+    .row:first-of-type{
+        .colored-bg{
+            height: 100vh;
+        }
+        .trans-bg{
+            height: 50vh;
+        }
+    }
+    
+}
+
+//Extra Small devices
+
+@media only screen and (max-width: 600px) {
+
+    .row:first-of-type{
+
+        .overlay{
+            div{
+                img{
+                    width: 15.5rem;
+                }
+            }
+        }
+
+        .trans-bg{
+            height: 100vh;
+        }
+        .colored-bg{
+            height: 100vh;
+        }
+    }
+    
+}
+   
